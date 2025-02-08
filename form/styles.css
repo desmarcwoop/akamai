@@ -1,0 +1,227 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--border-color);
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+
+.progress {
+  height: 100%;
+  background: var(--primary-color);
+  width: 20%;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  color: var(--secondary-color);
+  position: relative;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.step.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+label {
+  position: absolute;
+  top: -0.5rem;
+  left: 0.75rem;
+  background: white;
+  padding: 0 0.25rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-prev {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-next, .btn-submit {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-prev:hover {
+  background-color: #5a6268;
+}
+
+.btn-next:hover, .btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.btn-submit:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmation {
+  text-align: center;
+  padding: 2rem;
+}
+
+.job-details {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.job-details h3, .job-details h4 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.job-details ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.error {
+  border-color: #dc3545 !important;
+}
+
+.file-preview {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .steps {
+    font-size: 0.8rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+nav {
+  height: 65px;
+  /* border: 2px solid red; */
+  background-color: rgb(26 54 93);
+  color: white;
+  font-size: 35px;
+  font-family: sans-serif;
+  padding-left: 15px;
+}

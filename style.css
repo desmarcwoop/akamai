@@ -1,0 +1,179 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Header and navigation */
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Main content */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  section {
+    margin-bottom: 4rem;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Hero section */
+  #hero {
+    background-color: #1e3c72;
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  #hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btn {
+    background-color: #fff;
+    color: #1e3c72;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Expertise section */
+  .expertise-cards,
+  .testimonial-cards,
+  .job-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .card i {
+    font-size: 3rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+  }
+  
+  /* Achievements section */
+  #achievements {
+    background-color: #1e3c72;
+    color: #fff;
+    padding: 4rem 1rem;
+  }
+  
+  #achievements ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #achievements li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+  
+  #achievements li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: #fff;
+  }
+  
+  /* Job section */
+  .apply-btn {
+    background-color: #1e3c72;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: #152c54;
+  }
+  
+  /* Contact section */
+  #contact p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1e3c72;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .expertise-cards,
+    .testimonial-cards,
+    .job-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  

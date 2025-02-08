@@ -1,0 +1,201 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de candidature - Akamai Groupe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    Akamai Groupe
+  </nav>
+  <div class="container">
+    <div class="form-header">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="steps">
+        <div class="step active" data-step="1">Détails</div>
+        <div class="step" data-step="2">Informations</div>
+        <div class="step" data-step="3">Expérience</div>
+        <div class="step" data-step="4">Identité</div>
+        <div class="step" data-step="5">Compléments</div>
+      </div>
+    </div>
+
+    <form id="applicationForm">
+      <!-- Step 1 -->
+      <div class="form-step active" id="step1">
+        <!--        <h2>Détails de l'Offre</h2>
+        <div class="job-details">
+          <h3>Titre du Poste</h3>
+          <p>Description détaillée du poste...</p>
+          <h4>Profil Recherché</h4>
+          <p>Description du profil idéal...</p>
+          <h4>Missions Principales</h4>
+          <ul>
+            <li>Mission 1</li>
+            <li>Mission 2</li>
+            <li>Mission 3</li>
+          </ul>
+        </div>
+        <button type="button" class="btn-next">Continuer</button>
+        -->
+
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" id="step2">
+        <h2>Vos Informations Personnelles</h2>
+        <div class="form-group">
+          <input type="text" id="lastname" name="lastname" required>
+          <label for="lastname">Nom</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="firstname" name="firstname" required>
+          <label for="firstname">Prénom</label>
+        </div>
+        <div class="form-group">
+          <input type="number" id="age" name="age" required>
+          <label for="age">Âge</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" required>
+          <label for="phone">Numéro de téléphone</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="profession" name="profession">
+          <label for="profession">Profession (facultatif)</label>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn-prev">Retour</button>
+          <button type="button" class="btn-next">Suivant</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step" id="step3">
+        <h2>Votre Parcours et Disponibilités</h2>
+        <div class="form-group">
+          <textarea id="availability" name="availability" required></textarea>
+          <label for="availability">Disponibilités</label>
+        </div>
+        <div class="form-group">
+          <textarea id="experience" name="experience" required></textarea>
+          <label for="experience">Expérience précédente</label>
+        </div>
+        <div class="form-group">
+          <select id="education" name="education">
+            <option value="">Sélectionnez votre niveau d'études</option>
+            <option value="bac">Baccalauréat</option>
+            <option value="bac+2">Bac+2</option>
+            <option value="bac+3">Bac+3</option>
+            <option value="bac+5">Bac+5 ou plus</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="skills" name="skills" required></textarea>
+          <label for="skills">Compétences principales</label>
+        </div>
+        <div class="form-group">
+          <input type="file" id="cv" name="cv">
+          <label for="cv">CV (facultatif)</label>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn-prev">Retour</button>
+          <button type="button" class="btn-next">Suivant</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="form-step" id="step4">
+        <h2>Vérification d'Identité</h2>
+        <div class="form-group">
+          <input type="file" id="id_front" name="id_front" required>
+          <label for="id_front">Photo recto de la pièce d'identité</label>
+        </div>
+        <div class="form-group">
+          <input type="file" id="id_back" name="id_back" required>
+          <label for="id_back">Photo verso de la pièce d'identité</label>
+        </div>
+        <div class="form-group">
+          <input type="file" id="photo" name="photo" required>
+          <label for="photo">Photo professionnelle</label>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn-prev">Retour</button>
+          <button type="button" class="btn-next">Suivant</button>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="form-step" id="step5">
+        <h2>Informations Complémentaires</h2>
+        <div class="form-group">
+          <select id="payment_method" name="payment_method" required>
+            <option value="">Sélectionnez votre méthode de paiement</option>
+            <option value="virement">Virement bancaire</option>
+            <option value="cheque">Chèque</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="availability_details" name="availability_details" required></textarea>
+          <label for="availability_details">Assiduité / Disponibilité réelle</label>
+        </div>
+        <div class="form-group">
+          <textarea id="languages" name="languages" required></textarea>
+          <label for="languages">Langues parlées</label>
+        </div>
+        <div class="form-group">
+          <textarea id="motivation" name="motivation" required></textarea>
+          <label for="motivation">Pourquoi souhaitez-vous rejoindre Akamai Groupe ?</label>
+        </div>
+        <div class="form-group">
+          <textarea id="comments" name="comments"></textarea>
+          <label for="comments">Commentaires supplémentaires</label>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn-prev">Retour</button>
+          <button type="submit" class="btn-submit">Soumettre ma candidature</button>
+        </div>
+      </div>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <h2>Merci pour votre candidature !</h2>
+      <p>Votre demande a bien été prise en compte. Un email de confirmation vous sera envoyé sous peu.</p>
+      <p>Nous vous remercions de l'intérêt que vous portez à Akamai Groupe et nous reviendrons vers vous dès que possible.</p>
+    </div>
+  </div>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+
+ 
+        let param = new URLSearchParams(window.location.search) ;
+    let   detail = param.get("detail") ;
+if(detail){
+
+
+    let htmlCode = decodeURIComponent(detail) ;
+
+ //   alert(htmlCode)
+
+    document.getElementById("step1").innerHTML= htmlCode;
+} else{
+  window.location.href = "../"
+}
+     
+    //    window.location.href = "../"
+    
+
+
+    })
+  </script>
+    <script  src="script.js"></script>
+
+</body>
+</html>
