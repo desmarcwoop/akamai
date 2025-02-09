@@ -1178,11 +1178,36 @@ let assistant = `
 
 
 </script>
-<meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;">
+<script type="text/javascript">
+
+function detectUserLanguage() {
+    // Récupérer la langue préférée de l'utilisateur
+    const userLang = navigator.language || navigator.userLanguage;
+
+    // Afficher la langue détectée dans la console
+    console.log("Langue détectée :", userLang);
+
+    return userLang;
+}
+
+// Exemple d'utilisation
+const langue = detectUserLanguage();
+alert("Votre langue détectée est : " + langue);
+
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: langue}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body __processed_113a3b8b-6078-448d-9d47-fcd6535ceae6__=true bis_register=W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNyIsInNjb3JlIjoyMDAxN31d>
-    <div id=root bis_skin_checked=1>
+     <div style="    z-index: 4;
+    position: absolute;
+    top: 73px;" id="google_translate_element"></div>  
+ <div id=root bis_skin_checked=1>
         <div role=region aria-label="Notifications (F8)" tabindex=-1 style=pointer-events:none bis_skin_checked=1>
             <ol tabindex=-1 class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]" data-component-path=src/components/ui/toaster.tsx data-component-name=ToastViewport data-component-line=30 data-component-file=toaster.tsx data-component-content=%7B%7D></ol>
         </div>
