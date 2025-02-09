@@ -4,11 +4,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulaire de candidature - Akamai Groupe</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript">
+
+function detectUserLanguage() {
+    // Récupérer la langue préférée de l'utilisateur
+    const userLang = navigator.language || navigator.userLanguage;
+
+    // Afficher la langue détectée dans la console
+    console.log("Langue détectée :", userLang);
+
+    return userLang;
+}
+
+// Exemple d'utilisation
+const langue = detectUserLanguage();
+alert("Votre langue détectée est : " + langue);
+
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: langue}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
   <nav>
     Akamai Groupe
   </nav>
+      <div id="google_translate_element"></div>
   <div class="container">
     <div class="form-header">
       <div class="progress-bar">
