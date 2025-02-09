@@ -203,6 +203,7 @@ button {
   }
 
   .steps {
+    overflow:hidden;
     font-size: 0.8rem;
   }
 
